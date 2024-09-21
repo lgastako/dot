@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 for file in *; do
     if [[ "$file" != "install.sh" && ! "$file" =~ ^\. ]]; then
         rm -rf "$HOME/.$file"

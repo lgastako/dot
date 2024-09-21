@@ -1,0 +1,67 @@
+[user]
+	name = John Evans
+	email = lgastako@gmail.com
+
+[alias]
+        git         = !exec git
+        news        = log -p HEAD@{1}..HEAD@{0}
+        pull        = pull --recurse-submodules
+        u           = push
+        d           = pull
+        a           = add
+        co          = checkout
+        ci          = commit
+        st          = status
+        b           = branch
+        r           = remote
+        reb         = rebase
+        pl          = pull
+        pn          = pull --no-ff
+        p           = push
+        qc          = commit --no-verify
+        qcommit     = commit --no-verify
+        m           = merge
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+[color]
+        status      = auto
+        diff        = auto
+        branch      = auto
+        interactive = auto
+
+[core]
+	excludesfile = /Users/john/dotfiles/git/gitignore
+
+[push]
+        default = upstream
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+	prompt = false
+
+[diff]
+	tool = Kaleidoscope
+
+[grep]
+	lineNumber = true
+
+[mergetool]
+	keepBackup = true
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[commit]
+	template = /Users/john/.stCommitMsg

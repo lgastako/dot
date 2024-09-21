@@ -30,7 +30,7 @@
         interactive = auto
 
 [core]
-	excludesfile = /Users/john/dotfiles/git/gitignore
+	excludesfile = ~/dot/gitignore
 
 [push]
         default = upstream

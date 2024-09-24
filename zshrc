@@ -16,4 +16,4 @@ alias m=make
 alias c='git commit -m'
 alias cn='git commit --no-verify -m'
 
-export PATH="/home/node/.bun/bun:${PATH}"
+export PATH="/home/node/.bun/bin:${PATH}"

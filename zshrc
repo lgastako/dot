@@ -15,3 +15,5 @@ DISABLE_UPDATE_PROMPT=true
 alias m=make
 alias c='git commit -m'
 alias cn='git commit --no-verify -m'
+
+export PATH="/home/node/.bun/bun:${PATH}"
